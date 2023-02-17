@@ -1,0 +1,36 @@
+/* Google Fonts ======================== */
+@import url("https://fonts.googleapis.com/css?family=Abel|Open+Sans:400,400i");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap");
+
+/* CSS Reset =========================== */
+header,
+body,
+nav,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 100%;
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.bg__img {
+    height: 70vh;
+    background: url(../images/headers.jpg) fixed center no-repeat;
+    background-size: cover;
+}
+
