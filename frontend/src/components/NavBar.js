@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './NavBar.module.css';
+import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
 
 const NavBar = () => {
     return (
@@ -17,8 +19,8 @@ const NavBar = () => {
                 ${classes["nav-name"]} 
                 ${["navbar-brand"]} 
                 ${["m-0"]}
-                `} 
-                href="#">JH.Everette & Associates
+                `}
+                    href="#">JH.Everette & Associates
                 </a>
                 <div className={`
                 ${["navbar-nav"]} 
@@ -30,37 +32,55 @@ const NavBar = () => {
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `} 
-                    href="#">web design
+                    `}
+                        href="#">web design
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `} 
-                    href="#">web development
+                    `}
+                        href="#">web development
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `} 
-                    href="#">seo
+                    `}
+                        href="#">seo
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `} 
-                    href="#">branding
+                    `}
+                        href="#">branding
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `} 
-                    href="#">about us
+                    `}
+                        href="#">about us
                     </a>
+                    <a className={`
+                    ${classes["nav-a"]} 
+                    ${["nav-item"]}
+                    ${["nav-link"]}
+                    `}
+                    >
+                    <Link to="/login">
+                        <FaUserCircle className={classes.header__profMenu} />Create Account</Link>
+                </a>
+                <a className={`
+                    ${classes["nav-a"]} 
+                    ${["nav-item"]}
+                    ${["nav-link"]}
+                    `}
+                    >
+                    <Link to="/login">
+                        <FaUserCircle className={classes.header__profMenu} />Login</Link>
+                </a>
                 </div>
             </div>
         </nav>
