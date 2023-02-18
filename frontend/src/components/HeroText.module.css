@@ -1,0 +1,49 @@
+.hero__text {
+    max-width: 800px;
+    margin-left: 2%;
+    color: #ede7eb;
+}
+
+.hero__para {
+    max-width: 725px;
+}
+
+.hero__title {
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+    .hero__title {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero__title {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero__title {
+        font-size: 3.6rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero__title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero__title {
+        font-size: 2.9rem;
+    }
+}
+
+p {
+    font-size: 2rem;
+    color: #ede7eb;
+}
