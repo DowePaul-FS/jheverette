@@ -34,3 +34,12 @@ li {
     background-size: cover;
 }
 
+.btn1 {
+    margin-left: 40px;
+}
+
+.cta {
+    position: relative;
+    top: 2rem;
+    width: 100%;
+}
