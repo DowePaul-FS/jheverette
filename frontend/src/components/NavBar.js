@@ -19,8 +19,10 @@ const NavBar = () => {
                 ${classes["nav-name"]} 
                 ${["navbar-brand"]} 
                 ${["m-0"]}
-                `}
-                    href="#">JH.Everette & Associates
+                `}href="home">
+                    <Link to="/Home">
+                    J.H.Everette & Associates
+                    </Link>
                 </a>
                 <div className={`
                 ${["navbar-nav"]} 
@@ -32,54 +34,69 @@ const NavBar = () => {
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}
-                        href="#">web design
+                    `}href="design">
+                    <Link to="/WebDesign">
+                    WEB DESIGN
+                    </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}
-                        href="#">web development
+                    `}href="development">
+                    <Link to="/WebDevelopment">
+                    WEB DEVELOPMENT
+                    </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}
-                        href="#">seo
+                    `}href="seo">
+                    <Link to="/Seo">
+                    SEO
+                    </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}
-                        href="#">branding
+                    `}href="branding">
+                    <Link to="/Branding">
+                    BRANDING
+                    </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}
-                        href="#">about us
+                    `}href="about">
+                    <Link to="/AboutUs">
+                    ABOUT US
+                    </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}
                     ${["nav-link"]}
-                    `}
+                    `}href="create"
                     >
-                    <Link to="/login">
-                        <FaUserCircle className={classes.header__profMenu} />Create Account</Link>
+                    <Link to="/CreateAccount">
+                        <FaUserCircle className={classes.header__profMenu} />
+                        Create Account
+                        </Link>
                 </a>
                 <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}
                     ${["nav-link"]}
-                    `}
+                    `}href="login"
                     >
                     <Link to="/login">
-                        <FaUserCircle className={classes.header__profMenu} />Login</Link>
+                        <FaUserCircle className={classes.header__profMenu} 
+                        />
+                        Login
+                        </Link>
                 </a>
                 </div>
             </div>
