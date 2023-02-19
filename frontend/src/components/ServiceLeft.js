@@ -1,9 +1,5 @@
 import React from 'react';
 import classes from './ServiceLeft.module.css';
-import { Link } from "react-router-dom";
-import lay from "../images/des_lay_308_300.jpg";
-import block from "../images/des_block_308_560.jpg";
-import html from "../images/des_html_308_300.jpg";
 
 const ServiceLeft = (props) => {
     return (
@@ -28,9 +24,7 @@ const ServiceLeft = (props) => {
                 </div>
                 <div className={classes["svc__link"]}>
                     <a href="design" title="web design in wilmington north carolina"
-                    ><Link to="/WebDesign">
-                            learn more
-                        </Link></a
+                    >{props.page}</a
                     >
                 </div>
             </section>
@@ -42,40 +36,28 @@ const ServiceLeft = (props) => {
                 <h2 hidden>des</h2>
 
                 <figure className={classes.fig1}>
-                    <a href="design">
-                        <Link to="/WebDesign">
                             <img
                                 width="308"
                                 height="300"
-                                src={lay}
+                                src={props.image1}
                                 alt="Design Layout"
                             />
-                        </Link>
-                    </a>
                 </figure>
                 <figure className={classes.fig2}>
-                    <a href="design">
-                        <Link to="/WebDesign">
                             <img
                                 width="308"
                                 height="560"
-                                src={block}
+                                src={props.image2}
                                 alt="Web Design"
                             />
-                        </Link>
-                    </a>
                 </figure>
                 <figure className={classes.fig3}>
-                    <a href="design">
-                        <Link to="/WebDesign">
                             <img
                                 width="308"
                                 height="300"
-                                src={html}
+                                src={props.image3}
                                 alt="HTML Code"
                             />
-                        </Link>
-                    </a>
                 </figure>
             </section>
         </div>

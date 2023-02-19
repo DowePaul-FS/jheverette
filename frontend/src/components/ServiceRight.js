@@ -1,9 +1,5 @@
 import React from 'react';
 import classes from "./ServiceRight.module.css";
-import { Link } from "react-router-dom";
-import code from "../images/dev_code_308_300.jpg";
-import phone from "../images/dev_phone_308_560.jpg";
-import prog from "../images/dev_prog_308_300_.jpg"
 
 const ServiceRight = (props) => {
     return (
@@ -19,40 +15,28 @@ const ServiceRight = (props) => {
             >
                 <h2 hidden>dev</h2>
                 <figure className={classes.fig1}>
-                    <a href="development">
-                        <Link to="/WebDevelopment">
                             <img
                                 width="308"
                                 height="300"
-                                src={code}
+                                src={props.image1}
                                 alt="Development Code"
                             />
-                        </Link>
-                    </a>
                 </figure>
                 <figure className={classes.fig2}>
-                    <a href="development">
-                        <Link to="/WebDevelopment">
                             <img
                                 width="308"
                                 height="560"
-                                src={phone}
+                                src={props.image2}
                                 alt="Mobile Development"
                             />
-                        </Link>
-                    </a>
                 </figure>
                 <figure className={classes.fig3}>
-                    <a href="development">
-                        <Link to="/WebDevelopment">
                             <img
                                 width="308"
                                 height="300"
-                                src={prog}
+                                src={props.image3}
                                 alt="Development Programming"
                             />
-                        </Link>
-                    </a>
                 </figure>
             </section>
             <section class="col">
@@ -76,9 +60,7 @@ const ServiceRight = (props) => {
                 <div className={classes["svc__link"]}>
                     <a href="development"
                         title="web development in wilmington north carolina">
-                        <Link to="/WebDevelopment">
-                            learn more
-                        </Link></a
+                        {props.page}</a
                     >
                 </div>
             </section>
