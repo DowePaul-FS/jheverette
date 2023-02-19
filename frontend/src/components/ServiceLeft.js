@@ -41,7 +41,7 @@ const ServiceLeft = (props) => {
             >
                 <h2 hidden>des</h2>
 
-                <figure className={classes["fig1"]}>
+                <figure className={classes.fig1}>
                     <a href="design">
                         <Link to="/WebDesign">
                             <img
@@ -53,7 +53,7 @@ const ServiceLeft = (props) => {
                         </Link>
                     </a>
                 </figure>
-                <figure className={classes["fig2"]}>
+                <figure className={classes.fig2}>
                     <a href="design">
                         <Link to="/WebDesign">
                             <img
@@ -65,7 +65,7 @@ const ServiceLeft = (props) => {
                         </Link>
                     </a>
                 </figure>
-                <figure className={classes["fig3"]}>
+                <figure className={classes.fig3}>
                     <a href="design">
                         <Link to="/WebDesign">
                             <img
