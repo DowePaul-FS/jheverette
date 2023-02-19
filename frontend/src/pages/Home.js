@@ -5,6 +5,7 @@ import HeroText from "../components/HeroText";
 import RequestBtn from '../components/RequestBtn';
 import CallToAction from '../components/CallToAction';
 import Message from '../components/Message';
+import ServiceLeft from '../components/ServiceLeft';
 
 const Home = () => {
     return (
@@ -24,11 +25,22 @@ const Home = () => {
             <section className={classes.cta}>
                 <CallToAction />
             </section>
-            <section className={`${classes["bg__color"]} ${classes.msg}`}>
+            <section className={`
+            ${classes["bg__color"]} 
+            ${classes.msg}
+            `}
+            >
                 <Message message="Our company is structured so we can provide quality services
                         that reflect your budget. Our professional staff create unique
                         website designs to help you engage your audience and build brand
                         awareness." tag="let us help!" />
+            </section>
+            <section className={`
+            ${["container"]} 
+            ${classes["svc__pos1"]}
+            `}
+            >
+                <ServiceLeft />
             </section>
         </main>
     );
