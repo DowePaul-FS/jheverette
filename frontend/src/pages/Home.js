@@ -30,17 +30,22 @@ const Home = () => {
             ${classes.msg}
             `}
             >
-                <Message message="Our company is structured so we can provide quality services
+                <Message
+                    message="Our company is structured so we can provide quality services
                         that reflect your budget. Our professional staff create unique
                         website designs to help you engage your audience and build brand
-                        awareness." tag="let us help!" />
+                        awareness."
+                    tag="let us help!" />
             </section>
             <section className={`
             ${["container"]} 
             ${classes["svc__pos1"]}
             `}
             >
-                <ServiceLeft />
+                <ServiceLeft service="web design" serviceTitle="Enhance Your Business" serviceCopy="Effectively communicating your business story is how we approach
+                        web design projects focused on your contents visibility online.
+                        We incorporate modern website UX/UI design along with cutting
+                        edge technology to deliver innovative ideas." />
             </section>
         </main>
     );
