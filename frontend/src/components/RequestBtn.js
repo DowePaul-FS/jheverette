@@ -12,7 +12,7 @@ const RequestBtn = (props) => {
             <button
                 type="button"
                 className={classes["req__button"]}
-                id="request"
+                id={props.request}
                 data-toggle="modal"
                 data-target="#requestproposal"
             >

@@ -43,3 +43,12 @@ li {
     top: 2rem;
     width: 100%;
 }
+
+.bg__color {
+    background-color: #010d28;
+}
+
+.msg {
+    position: relative;
+    top: 3.2rem;
+}
