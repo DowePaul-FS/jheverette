@@ -8,6 +8,7 @@ import CallToAction from '../components/CallToAction';
 import Message from '../components/Message';
 import ServiceLeft from '../components/ServiceLeft';
 import ServiceRight from "../components/ServiceRight";
+import Start from '../components/Start';
 import lay from "../images/des_lay_308_300.jpg";
 import block from "../images/des_block_308_560.jpg";
 import html from "../images/des_html_308_300.jpg";
@@ -134,6 +135,9 @@ const Home = () => {
                     image2={bulb}
                     image3={tech}
                 />
+            </section>
+            <section className={classes.start}>
+                <Start text="We’ve Got What You Need! Ready to Start?" />
             </section>
         </main>
     );
