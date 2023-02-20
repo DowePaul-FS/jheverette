@@ -9,6 +9,7 @@ import Message from '../components/Message';
 import ServiceLeft from '../components/ServiceLeft';
 import ServiceRight from "../components/ServiceRight";
 import Start from '../components/Start';
+import Footer from '../components/Footer';
 import lay from "../images/des_lay_308_300.jpg";
 import block from "../images/des_block_308_560.jpg";
 import html from "../images/des_html_308_300.jpg";
@@ -139,6 +140,7 @@ const Home = () => {
             <section className={classes.start}>
                 <Start text="We’ve Got What You Need! Ready to Start?" />
             </section>
+            <Footer />
         </main>
     );
 }
