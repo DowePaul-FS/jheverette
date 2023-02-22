@@ -20,3 +20,13 @@
 a:hover {
     color: #BADCF2;
 }
+
+.btn {
+    background-color: transparent;
+    border-color: transparent;
+    padding-top: 0.6px;
+}
+
+.btn:hover {
+    color: #BADCF2;
+}

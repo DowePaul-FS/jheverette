@@ -3,7 +3,7 @@ import classes from './NavBar.module.css';
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <nav className={`
         ${["navbar"]} 
@@ -19,9 +19,9 @@ const NavBar = () => {
                 ${classes["nav-name"]} 
                 ${["navbar-brand"]} 
                 ${["m-0"]}
-                `}href="home">
+                `} href="home">
                     <Link to="/Home">
-                    J.H.Everette & Associates
+                        J.H.Everette & Associates
                     </Link>
                 </a>
                 <div className={`
@@ -34,70 +34,68 @@ const NavBar = () => {
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}href="design">
-                    <Link to="/WebDesign">
-                    WEB DESIGN
-                    </Link>
+                    `} href="design">
+                        <Link to="/WebDesign">
+                            WEB DESIGN
+                        </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}href="development">
-                    <Link to="/WebDevelopment">
-                    WEB DEVELOPMENT
-                    </Link>
+                    `} href="development">
+                        <Link to="/WebDevelopment">
+                            WEB DEVELOPMENT
+                        </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}href="seo">
-                    <Link to="/Seo">
-                    SEO
-                    </Link>
+                    `} href="seo">
+                        <Link to="/Seo">
+                            SEO
+                        </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}href="branding">
-                    <Link to="/Branding">
-                    BRANDING
-                    </Link>
+                    `} href="branding">
+                        <Link to="/Branding">
+                            BRANDING
+                        </Link>
                     </a>
                     <a className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]} 
                     ${["nav-link"]}
-                    `}href="about">
-                    <Link to="/AboutUs">
-                    ABOUT US
-                    </Link>
+                    `} href="about">
+                        <Link to="/AboutUs">
+                            ABOUT US
+                        </Link>
                     </a>
-                    <a className={`
+                    <button className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}
                     ${["nav-link"]}
-                    `}href="create"
+                    ${classes.btn}
+                    `} onClick={props.onShowCreate}
                     >
-                    <Link to="/CreateAccount">
                         <FaUserCircle className={classes.header__profMenu} />
                         Create Account
-                        </Link>
-                </a>
-                <a className={`
+                    </button>
+                    <button className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}
                     ${["nav-link"]}
-                    `}href="login"
+                    ${classes.btn}
+                    `} onClick={props.onShowCreate}
                     >
-                    <Link to="/login">
-                        <FaUserCircle className={classes.header__profMenu} 
+                        <FaUserCircle className={classes.header__profMenu}
                         />
                         Login
-                        </Link>
-                </a>
+                    </button>
                 </div>
             </div>
         </nav>
