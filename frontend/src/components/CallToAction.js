@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import des from "../images/cta_des.jpg";
-import dev from "../images/cta_dev.jpg";
-import seo from "../images/cta_seo.jpg";
-import brand from "../images/cta_brand.jpg";
+import des from "../assets/images/cta_des.jpg";
+import dev from "../assets/images/cta_dev.jpg";
+import seo from "../assets/images/cta_seo.jpg";
+import brand from "../assets/images/cta_brand.jpg";
 
 const CallToAction = (props) => {
     return (

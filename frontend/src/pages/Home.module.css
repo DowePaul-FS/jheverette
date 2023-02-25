@@ -30,7 +30,7 @@ li {
 
 .bg__img {
     height: 70vh;
-    background: url(../images/headers.jpg) fixed center no-repeat;
+    background: url(../assets/images/headers.jpg) fixed center no-repeat;
     background-size: cover;
 }
 
