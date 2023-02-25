@@ -1,3 +1,9 @@
+UUID() VARCHAR(128) PK NN 
+
+CreatedAt default(CURRENT_TIMESTAMP)
+
+
+
 Header
     NavBar
 Hero
