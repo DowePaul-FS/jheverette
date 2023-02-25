@@ -523,3 +523,7 @@ textarea.form-input {
     background-color: #000;
     border-color: #000;
 }
+
+.btn {
+    margin-right: 25px;
+}

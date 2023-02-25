@@ -90,7 +90,7 @@ const NavBar = (props) => {
                     ${["nav-item"]}
                     ${["nav-link"]}
                     ${classes.btn}
-                    `} onClick={props.onShowCreate}
+                    `} onClick={props.onShowLogin}
                     >
                         <FaUserCircle className={classes.header__profMenu}
                         />

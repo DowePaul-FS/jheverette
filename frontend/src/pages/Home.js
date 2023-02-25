@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Create from '../components/Users/Create';
+import Login from '../components/Users/Login';
 import NavBar from "../components/UI/NavBar";
 import HeroText from "../components/HeroText";
 import RequestBtn from "../components/UI/RequestBtn";
@@ -26,20 +27,27 @@ import tech from "../images/brand_tech_308_300.jpg";
 
 const Home = () => {
   const [createIsShown, setCreateIsShown] = useState(false);
+  const [loginIsShown, setLoginIsShown] = useState(false);
 
   const showCreateHandler = () => {
     setCreateIsShown(true);
   };
 
+  const showLoginHandler = () => {
+    setLoginIsShown(true);
+  };
+
   const hideCreateHandler = () => {
     setCreateIsShown(false);
+    setLoginIsShown(false);
   };
 
   return (
     <main>
       <section className={classes["bg__img"]}>
         {createIsShown && <Create onClose={hideCreateHandler} />}
-        <NavBar onShowCreate={showCreateHandler} />
+        {loginIsShown && <Login onClose={hideCreateHandler} />}
+        <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} />
         <HeroText
           title="Quality Web Design & Development for all your Business needs."
           text="We provide full-service website design, development, and search
