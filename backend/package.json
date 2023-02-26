@@ -4,7 +4,7 @@
   "description": "node app",
   "main": "server.js",
   "scripts": {
-    "dev": "(cd ../frontend && npm run start), twig --watch cd api; server.js",
+    "dev": "(cd ../frontend && npm run start) & nodemon -e js, twig --watch cd api; server.js",
     "server": "npm start --prefix api",
     "client": "npm run start --prefix ../frontend",
     "start": "npm start --prefix api"
@@ -13,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "twig": "^1.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
