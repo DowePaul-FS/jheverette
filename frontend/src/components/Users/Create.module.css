@@ -114,6 +114,25 @@ input:-webkit-autofill~.form-validation {
     border: 1px solid #f8f8f8;
 }
 
+.form-input-invalid {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    padding: 17px 19px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-style: italic;
+    color: #888;
+    background-color: #4ef1fc;
+    background-image: none;
+    border: 1px solid #f8f8f8;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #f8f8f8;
+}
+
 .form-input:focus {
     outline: 0;
     background: #fff;
@@ -218,7 +237,7 @@ textarea.form-input {
     top: 1px;
     z-index: 11;
     margin-top: 2px;
-    font-size: 10px;
+    font-size: 15px;
     line-height: 12px;
     font-style: italic;
     letter-spacing: 0;
@@ -272,6 +291,7 @@ textarea.form-input {
 
 .form-output.error {
     color: #d9534f;
+    
 }
 
 .form-output.success {
