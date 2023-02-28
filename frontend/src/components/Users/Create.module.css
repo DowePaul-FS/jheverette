@@ -79,6 +79,7 @@
 
 .rd-mailform *+.button {
     margin-top: 25px;
+    background-color: #eebb55;
 }
 
 input:-webkit-autofill~label,
@@ -105,13 +106,13 @@ input:-webkit-autofill~.form-validation {
     line-height: 24px;
     font-style: italic;
     color: #888;
-    background-color: #f8f8f8;
+    background-color: #d5e7f3;
     background-image: none;
-    border: 1px solid #f8f8f8;
+    border: 1px solid #d5e7f3;
     border-radius: 3px;
     -webkit-appearance: none;
     transition: 0.3s ease-in-out;
-    border: 1px solid #f8f8f8;
+    border: 1px solid #eebb55;
 }
 
 .form-input-invalid {
@@ -126,11 +127,11 @@ input:-webkit-autofill~.form-validation {
     color: #888;
     background-color: #4ef1fc;
     background-image: none;
-    border: 1px solid #f8f8f8;
+    border: 1px solid #d5e7f3;
     border-radius: 3px;
     -webkit-appearance: none;
     transition: 0.3s ease-in-out;
-    border: 1px solid #f8f8f8;
+    border: 1px solid #eebb55;
 }
 
 .form-input:focus {

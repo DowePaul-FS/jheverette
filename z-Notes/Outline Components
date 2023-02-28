@@ -16,3 +16,5 @@ Optimization
 Branding
 ReadyBanner
 Footer
+
+nodemon server.js, twig --watch

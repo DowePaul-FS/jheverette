@@ -7,11 +7,12 @@
     "dev": "(cd ../frontend && npm run start) & nodemon -e js, twig --watch cd api; server.js",
     "server": "npm start --prefix api",
     "client": "npm run start --prefix ../frontend",
-    "start": "npm start --prefix api"
+    "start": "concurrently \"npm run server\" \"cd ../frontend && npm run start\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.6.0",
     "twig": "^1.15.4"
   },
   "devDependencies": {

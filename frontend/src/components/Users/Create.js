@@ -79,7 +79,7 @@ const Create = (props) => {
         setLnameTouched(true);
     };
 
-    const emailIsValid = lastname.trim() !== '';
+    const emailIsValid = email.trim() !== '';
     const emailInputIsInvalid = !emailIsValid && emailTouched;
     const emailInputHandler = (event) => {
         setEmail(event.target.value);
