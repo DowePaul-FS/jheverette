@@ -1,9 +1,11 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
+import { useSelector } from 'react-redux';
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Create from '../components/Users/Create';
 import Login from '../components/Users/Login';
 import NavBar from "../components/UI/NavBar";
+import AuthBar from "../components/UI/AuthBar";
 import HeroText from "../components/HeroText";
 import RequestBtn from "../components/UI/RequestBtn";
 import CallToAction from "../components/CallToAction";
@@ -26,8 +28,15 @@ import bulb from "../assets/images/brand_bulb_308_560.jpg";
 import tech from "../assets/images/brand_tech_308_300.jpg";
 
 const Home = () => {
+  const isAuth = useSelector(state => state.isAuthenticated);
   const [createIsShown, setCreateIsShown] = useState(false);
   const [loginIsShown, setLoginIsShown] = useState(false);
+
+  useEffect(() => {
+    if (isAuth) {
+      hideLoginHandler();
+    }
+  }, [isAuth, loginIsShown]);
 
   const showCreateHandler = () => {
     setCreateIsShown(true);
@@ -39,15 +48,19 @@ const Home = () => {
 
   const hideCreateHandler = () => {
     setCreateIsShown(false);
+  };
+
+  const hideLoginHandler = () => {
     setLoginIsShown(false);
   };
 
   return (
     <main>
       <section className={classes["bg__img"]}>
+        {!isAuth && <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} />}
+        {isAuth && <AuthBar />}
         {createIsShown && <Create onClose={hideCreateHandler} />}
-        {loginIsShown && <Login onClose={hideCreateHandler} />}
-        <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} />
+        {loginIsShown && <Login onClose={hideLoginHandler} />}
         <HeroText
           title="Quality Web Design & Development for all your Business needs."
           text="We provide full-service website design, development, and search

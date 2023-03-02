@@ -1,18 +1,29 @@
+import { React } from "react";
+import { useDispatch } from 'react-redux';
 import Modal from '../UI/Modal';
 import classes from './Login.module.css';
-
+import { authActions } from '../../store';
 
 const Login = (props) => {
+    const dispatch = useDispatch();
+
+    const loginHandler = (event) => {
+        event.preventDefault();
+        dispatch(authActions.login());
+    };
+
     return (
         <Modal onClose={props.onClose}>
-            <form className={`
+            <form
+                onSubmit={loginHandler}
+                className={`
             ${classes["rd-mailform"]} 
             ${classes["rd-mailform_responsive"]}
-            `} 
-            data-form-output="form-output-global" 
-            data-form-type="contact" 
-            method="post" 
-            action="bat/rd-mailform.php">
+            `}
+                data-form-output="form-output-global"
+                data-form-type="contact"
+                method="post"
+                action="">
                 <div className={`
                 ${classes["form-wrap"]} 
                 ${classes["form-wrap_icon"]} 
@@ -21,16 +32,13 @@ const Login = (props) => {
                 >
                     <input className={`
                     ${classes["form-input"]}
-                    `} 
-                    id={["modal-register-email"]} 
-                    type="email" 
-                    name="email" 
-                    data-constraints="@Email @Required" 
+                    `}
+                        id={["modal-register-email"]}
+                        type="email"
+                        name="email"
+                        placeholder='Your Email'
+                        data-constraints="@Email @Required"
                     />
-                    <label className={classes["form-label"]} 
-                    for={["modal-register-email"]}
-                    >Your e-mail
-                    </label>
                 </div>
                 <div className={`
                 ${classes["form-wrap"]} 
@@ -38,30 +46,29 @@ const Login = (props) => {
                 ${classes["linear-icon-lock"]}
                 `}
                 >
-                    <input className={classes["form-input"]} 
-                    id={["modal-register-password"]} 
-                    type="password" 
-                    name="password" 
-                    data-constraints="@Required" 
+                    <input className={classes["form-input"]}
+                        id={["modal-register-password"]}
+                        type="password"
+                        name="password"
+                        placeholder='Your Password'
+                        data-constraints="@Required"
                     />
-                    <label className={classes["form-label"]} 
-                    for={["modal-register-password"]}
-                    >Your password
-                    </label>
                 </div>
                 <button className={`
                 ${classes["button"]} 
                 ${classes["button-primary"]} 
-                ${classes.btn}`} 
-                type="close" 
-                onClick={props.onClose}
+                ${classes.btn}`}
+                    id='button1'
+                    type="close"
+                    onClick={props.onClose}
                 >Close
                 </button>
                 <button className={`
                 ${classes["button"]} 
                 ${classes["button-primary"]}
-                `} 
-                type="submit"
+                `}
+                    id="button2"
+                    type="submit"
                 >Log in
                 </button>
             </form>

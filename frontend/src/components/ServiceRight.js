@@ -39,7 +39,7 @@ const ServiceRight = (props) => {
                             />
                 </figure>
             </section>
-            <section class="col">
+            <section className="col">
                 <div>
                     <h3 className={classes.svc}>
                         {props.service}
