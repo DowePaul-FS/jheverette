@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Modal from '../UI/Modal';
-import classes from './Create.module.css';
-import axios from '../../API';
+import Modal from "../UI/Modal";
+import classes from "./Create.module.css";
+import axios from "../../API";
 
 const Create = (props) => {
-    const [firstname, setFirstname] = useState('');
-    const [lastname, setLastname] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [password2, setPassword2] = useState('');
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [password2, setPassword2] = useState("");
     const [fnameTouched, setFnameTouched] = useState(false);
     const [lnameTouched, setLnameTouched] = useState(false);
     const [emailTouched, setEmailTouched] = useState(false);
@@ -42,79 +42,123 @@ const Create = (props) => {
             return;
         }
 
-        const post = { firstname: firstname, lastname: lastname, email: email, password: password }
+        const post = {
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            password: password,
+        };
+
         try {
-            const response = await axios.post(`http://localhost:4000/users`, post)
+            const response = await axios.post(`http://localhost:4000/users`, post);
             console.log(response.data);
         } catch (event) {
-            alert(event)
+            alert(event);
         }
-        setFirstname('');
+
+        await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCeNavcsFy8CU0s2Y8QZrJaz-_Ou8HYR50`,
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    returnSecureToken: true
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        ).then((res) => {
+            if (res.ok) {
+                // ...
+            } else {
+                return res.json().then(data => {
+                    let errorMessage = 'Authentication failed!';
+                    if (data && data.error && data.error.message) {
+                        errorMessage = data.error.message;
+                    }
+                    alert(errorMessage);
+                });
+            }
+        });
+
+        setFirstname("");
         setFnameTouched(false);
-        setLastname('');
+        setLastname("");
         setLnameTouched(false);
-        setEmail('');
+        setEmail("");
         setEmailTouched(false);
-        setPassword('');
+        setPassword("");
         setPasswordTouched(false);
-        setPassword2('');
+        setPassword2("");
         setPassword2Touched(false);
     };
 
-    const fnameIsValid = firstname.trim() !== '';
+    const fnameIsValid = firstname.trim() !== "";
     const fnameInputIsInvalid = !fnameIsValid && fnameTouched;
     const fnameInputHandler = (event) => {
         setFirstname(event.target.value);
-    }
-    const fnameInputBlurHandler = event => {
+    };
+    const fnameInputBlurHandler = (event) => {
         setFnameTouched(true);
     };
 
-    const lnameIsValid = lastname.trim() !== '';
+    const lnameIsValid = lastname.trim() !== "";
     const lnameInputIsInvalid = !lnameIsValid && lnameTouched;
     const lnameInputHandler = (event) => {
         setLastname(event.target.value);
-    }
-    const lnameInputBlurHandler = event => {
+    };
+    const lnameInputBlurHandler = (event) => {
         setLnameTouched(true);
     };
 
-    const emailIsValid = email.trim() !== '';
+    const emailIsValid = email.trim() !== "";
     const emailInputIsInvalid = !emailIsValid && emailTouched;
     const emailInputHandler = (event) => {
         setEmail(event.target.value);
-    }
-    const emailInputBlurHandler = event => {
+    };
+    const emailInputBlurHandler = (event) => {
         setEmailTouched(true);
     };
 
-    const passwordIsValid = password.trim() !== '';
+    const passwordIsValid = password.trim() !== "";
     const passwordInputIsInvalid = !passwordIsValid && passwordTouched;
     const passwordInputHandler = (event) => {
         setPassword(event.target.value);
-    }
-    const passwordInputBlurHandler = event => {
+    };
+    const passwordInputBlurHandler = (event) => {
         setPasswordTouched(true);
     };
 
-    const password2IsValid = password2.trim() !== '' && password2 === password;
+    const password2IsValid = password2.trim() !== "" && password2 === password;
     const password2InputIsInvalid = !password2IsValid && password2Touched;
     const password2InputHandler = (event) => {
         setPassword2(event.target.value);
-    }
-    const password2InputBlurHandler = event => {
+    };
+    const password2InputBlurHandler = (event) => {
         setPassword2Touched(true);
     };
 
-    const fnameInputClasses = fnameInputIsInvalid ? 'form-input-invalid' : 'form-input';
-    const lnameInputClasses = lnameInputIsInvalid ? 'form-input-invalid' : 'form-input';
-    const emailInputClasses = emailInputIsInvalid ? 'form-input-invalid' : 'form-input';
-    const passwordInputClasses = passwordInputIsInvalid ? 'form-input-invalid' : 'form-input';
-    const password2InputClasses = password2InputIsInvalid ? 'form-input-invalid' : 'form-input';
+    const fnameInputClasses = fnameInputIsInvalid
+        ? "form-input-invalid"
+        : "form-input";
+    const lnameInputClasses = lnameInputIsInvalid
+        ? "form-input-invalid"
+        : "form-input";
+    const emailInputClasses = emailInputIsInvalid
+        ? "form-input-invalid"
+        : "form-input";
+    const passwordInputClasses = passwordInputIsInvalid
+        ? "form-input-invalid"
+        : "form-input";
+    const password2InputClasses = password2InputIsInvalid
+        ? "form-input-invalid"
+        : "form-input";
 
     return (
         <Modal onClose={props.onClose}>
-            <form className={`
+            <form
+                className={`
             ${classes["rd-mailform"]} 
             ${classes["rd-mailform_responsive"]}
             `}
@@ -124,12 +168,15 @@ const Create = (props) => {
                 action=""
                 onSubmit={newAccountHandler}
             >
-                <div className={`
+                <div
+                    className={`
             ${classes["form-wrap"]} 
             ${classes["form-wrap_icon"]} 
             ${classes["linear-icon-envelope"]}
-            `}>
-                    <input className={`
+            `}
+                >
+                    <input
+                        className={`
                     ${classes[fnameInputClasses]}
                     `}
                         id={["firstname"]}
@@ -141,14 +188,21 @@ const Create = (props) => {
                         onBlur={fnameInputBlurHandler}
                         data-constraints="@Required"
                     />
-                    {fnameInputIsInvalid && <p className={classes["form-validation"]}>Firstname must not be empty</p>}
+                    {fnameInputIsInvalid && (
+                        <p className={classes["form-validation"]}>
+                            Firstname must not be empty
+                        </p>
+                    )}
                 </div>
-                <div className={`
+                <div
+                    className={`
             ${classes["form-wrap"]} 
             ${classes["form-wrap_icon"]} 
             ${classes["linear-icon-envelope"]}
-            `}>
-                    <input className={`
+            `}
+                >
+                    <input
+                        className={`
                     ${classes[lnameInputClasses]}
                     `}
                         id={["lastname"]}
@@ -160,32 +214,46 @@ const Create = (props) => {
                         onBlur={lnameInputBlurHandler}
                         data-constraints="@Required"
                     />
-                    {lnameInputIsInvalid && <p className={classes["form-validation"]}>Lastname must not be empty</p>}
+                    {lnameInputIsInvalid && (
+                        <p className={classes["form-validation"]}>
+                            Lastname must not be empty
+                        </p>
+                    )}
                 </div>
-                <div className={`
+                <div
+                    className={`
                 ${classes["form-wrap"]} 
                 ${classes["form-wrap_icon"]} 
                 ${classes["linear-icon-envelope"]}
-                `}>
-                    <input className={`
+                `}
+                >
+                    <input
+                        className={`
                     ${classes[emailInputClasses]}`}
                         id={["modal-register-email"]}
                         type="email"
                         name="email"
-                        placeholder='Email Address'
+                        placeholder="Email Address"
                         value={email}
                         onChange={emailInputHandler}
                         onBlur={emailInputBlurHandler}
                         data-constraints="@Email @Required"
                     />
-                    {emailInputIsInvalid && <p className={classes["form-validation"]}>Email must not be empty</p>}
+                    {emailInputIsInvalid && (
+                        <p className={classes["form-validation"]}>
+                            Email must not be empty
+                        </p>
+                    )}
                 </div>
-                <div className={`
+                <div
+                    className={`
                 ${classes["form-wrap"]} 
                 ${classes["form-wrap_icon"]} 
                 ${classes["linear-icon-lock"]}
-                `}>
-                    <input className={classes[passwordInputClasses]}
+                `}
+                >
+                    <input
+                        className={classes[passwordInputClasses]}
                         id={["modal-register-password"]}
                         type="password"
                         name="password"
@@ -195,14 +263,21 @@ const Create = (props) => {
                         onBlur={passwordInputBlurHandler}
                         data-constraints="@Required"
                     />
-                    {passwordInputIsInvalid && <p className={classes["form-validation"]}>Password must not be empty</p>}
+                    {passwordInputIsInvalid && (
+                        <p className={classes["form-validation"]}>
+                            Password must not be empty
+                        </p>
+                    )}
                 </div>
-                <div className={`
+                <div
+                    className={`
                 ${classes["form-wrap"]} 
                 ${classes["form-wrap_icon"]} 
                 ${classes["linear-icon-lock"]}
-                `}>
-                    <input className={classes[password2InputClasses]}
+                `}
+                >
+                    <input
+                        className={classes[password2InputClasses]}
                         id={["modal-register-password2"]}
                         type="password"
                         name="password2"
@@ -212,24 +287,31 @@ const Create = (props) => {
                         onBlur={password2InputBlurHandler}
                         data-constraints="@Required"
                     />
-                    {password2InputIsInvalid && <p className={classes["form-validation"]}>
-                        Confirm password must match password</p>}
+                    {password2InputIsInvalid && (
+                        <p className={classes["form-validation"]}>
+                            Confirm password must match password
+                        </p>
+                    )}
                 </div>
-                <button className={`
+                <button
+                    className={`
                 ${classes["button"]} 
                 ${classes["button-primary"]}
                 ${classes.btn}
                 `}
                     type="close"
                     onClick={props.onClose}
-                >Close
+                >
+                    Close
                 </button>
-                <button className={`
+                <button
+                    className={`
                 ${classes["button"]} 
                 ${classes["button-primary"]}
                 `}
                     type="submit"
-                >Create
+                >
+                    Create
                 </button>
             </form>
         </Modal>

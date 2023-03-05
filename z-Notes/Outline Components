@@ -4,6 +4,8 @@ CreatedAt default(CURRENT_TIMESTAMP)
 
 curl -d 'firstname=Paul&lastname=Dowe&email=pdowejr@twc.com&password=TI22word!' -X POST http://localhost:4000/users
 
+pm2 monit
+
 Header
     NavBar
 Hero

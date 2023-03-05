@@ -30,3 +30,7 @@ a:hover {
 .btn:hover {
     color: #BADCF2;
 }
+
+.span {
+    margin-left: .4rem;
+}

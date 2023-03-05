@@ -4,6 +4,7 @@
     "firstname",
     "lastname",
     "mailform",
+    "profileform",
     "reduxjs",
     "UUIDV"
   ]

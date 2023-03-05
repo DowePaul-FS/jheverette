@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import classes from './NavBar.module.css';
+import classes from './AuthBar.module.css';
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { authActions } from '../../store';
 
 const AuthBar = (props) => {
     const dispatch = useDispatch();
-    
+
     const logOutHandler = (event) => {
         event.preventDefault();
         dispatch(authActions.logout());
@@ -91,21 +91,23 @@ const AuthBar = (props) => {
                     ${classes.btn}
                     `} onClick={props.onShowCreate}
                     >
-                        <FaUserCircle className={classes.header__profMenu} />
-                        My Files
+                        <Link to="/Profile">
+                            <FaUserCircle className={classes.header__profMenu} />
+                            <span className={classes.span}>Profile</span>
+                        </Link>
                     </button>
                     <button className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}
                     ${["nav-link"]}
                     ${classes.btn}
-                    `} 
-                    type='close'
-                    onClick={logOutHandler}
+                    `}
+                        type='close'
+                        onClick={logOutHandler}
                     >
                         <FaUserCircle className={classes.header__profMenu}
                         />
-                        Logout
+                        <span className={classes.span}>Logout</span>
                     </button>
                 </div>
             </div>

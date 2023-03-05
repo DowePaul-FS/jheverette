@@ -83,7 +83,7 @@ const NavBar = (props) => {
                     `} onClick={props.onShowCreate}
                     >
                         <FaUserCircle className={classes.header__profMenu} />
-                        Create Account
+                        <span className={classes.span}>Create Account</span>
                     </button>
                     <button className={`
                     ${classes["nav-a"]} 
@@ -94,7 +94,7 @@ const NavBar = (props) => {
                     >
                         <FaUserCircle className={classes.header__profMenu}
                         />
-                        Login
+                        <span className={classes.span}>Login</span>
                     </button>
                 </div>
             </div>
