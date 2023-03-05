@@ -15,7 +15,7 @@ const ProfileForm = (event) => {
         {
             method: 'POST',
             body: JSON.stringify({
-                idToken: authSel.token,
+                idToken: authSel,
                 password: enteredNewPassword,
                 returnSecureToken: false
             }),

@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { useDispatch } from 'react-redux';
 import Modal from '../UI/Modal';
 import classes from './Login.module.css';
-import { authActions } from '../../store';
+import { authActions } from '../../store/index';
 
 const Login = (props) => {
     const [email, setEmail] = useState("");
@@ -58,9 +58,6 @@ const Login = (props) => {
         setEmail("");
         setEmailTouched(false);
         setPassword("");
-        
-
-        
     };
 
     const emailIsValid = email.trim() !== "";
@@ -161,6 +158,7 @@ const Login = (props) => {
                 `}
                     id="button2"
                     type="submit"
+                    
                 >Log in
                 </button>
             </form>

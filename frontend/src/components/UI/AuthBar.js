@@ -1,17 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import classes from './AuthBar.module.css';
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
-import { authActions } from '../../store';
 
 const AuthBar = (props) => {
-    const dispatch = useDispatch();
-
-    const logOutHandler = (event) => {
-        event.preventDefault();
-        dispatch(authActions.logout());
-    };
 
     return (
         <nav className={`
@@ -103,7 +95,7 @@ const AuthBar = (props) => {
                     ${classes.btn}
                     `}
                         type='close'
-                        onClick={logOutHandler}
+                        onClick={props.signOut}
                     >
                         <FaUserCircle className={classes.header__profMenu}
                         />

@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import { useSelector } from 'react-redux';
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 import Create from '../components/Users/Create';
 import Login from '../components/Users/Login';
 import NavBar from "../components/UI/NavBar";
@@ -58,7 +59,7 @@ const Home = () => {
     <main>
       <section className={classes["bg__img"]}>
         {!isAuth && <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} />}
-        {isAuth && <AuthBar />}
+        {isAuth && <AuthBar /> && <Navigate to="/Profile" replace={true} />}
         {createIsShown && <Create onClose={hideCreateHandler} />}
         {loginIsShown && <Login onClose={hideLoginHandler} />}
         <HeroText
