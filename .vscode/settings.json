@@ -6,6 +6,7 @@
     "mailform",
     "profileform",
     "reduxjs",
-    "UUIDV"
+    "UUIDV",
+    "valuenow"
   ]
 }

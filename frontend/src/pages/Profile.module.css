@@ -1,3 +1,47 @@
 .background {
-    background-color: #eee;
+    background-color: #0a2577;
+}
+
+.style {
+    width: 150px;
+}
+
+.logo {
+    background-color: #0a2577;
+}
+
+.text {
+    color: #BADCF2;
+}
+
+.bread {
+    color: #ffcc31;
+}
+
+.style1 {
+    font-size: .77rem;
+}
+
+.style2 {
+    height: 5px;
+}
+
+.bar1 {
+    width: 80%;
+}
+
+.bar2 {
+    width: 72%;
+}
+
+.bar3 {
+    width: 89%;
+}
+
+.bar4 {
+    width: 55%;
+}
+
+.bar5 {
+    width: 66%;
 }
