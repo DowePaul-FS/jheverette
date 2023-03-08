@@ -5,8 +5,10 @@
     "lastname",
     "mailform",
     "profileform",
+    "progressbar",
     "reduxjs",
     "UUIDV",
-    "valuenow"
+    "valuenow",
+    "Wireframe"
   ]
 }

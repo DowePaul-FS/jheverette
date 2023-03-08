@@ -142,52 +142,110 @@ const Profile = () => {
                     </div>
                     <div className="row">
                         <div className={["col-lg-6"]}>
-                            <div className={`${["card"]} ${["mb-4"]} ${["mb-lg-0"]}`}>
-                                <div className={`{["card-body"]} ${["p-0"]}`}>
+                            <div className={`
+                            ${["card"]} 
+                            ${["mb-4"]} 
+                            ${["mb-lg-0"]}`}>
+                                <div className={`
+                                ${["card-body"]} 
+                                ${["p-0"]}`}>
                                     <ul
-                                        className={`${["list-group"]} ${["list-group-flush"]} ${[
-                                            "rounded-3",
-                                        ]}`}
+                                        className={`
+                                        ${["list-group"]} 
+                                        ${["list-group-flush"]} 
+                                        ${[
+                                                "rounded-3",
+                                            ]}`}
                                     >
                                         <li
-                                            className={`${["list-group-item"]} ${["d-flex"]} ${[
-                                                "justify-content-between",
-                                            ]} ${["align-items-center"]} ${["p-3"]}`}
+                                            className={`
+                                            ${["list-group-item"]} 
+                                            ${["d-flex"]} 
+                                            ${[
+                                                    "justify-content-left",
+                                                ]} 
+                                            ${["align-items-center"]} 
+                                            ${["p-3"]}`}
                                         >
                                             <i
-                                                className={`${["fas"]} ${["fa-globe"]} ${["fa-lg"]} ${[
-                                                    "text-warning",
-                                                ]}`}
-                                            ></i>
-                                            <p className={["mb-0"]}>Your Files</p>
+                                                className={`
+                                                ${["fas"]} 
+                                                ${["fa-globe"]} 
+                                                ${["fa-lg"]} 
+                                                ${[
+                                                        "text-warning",
+                                                    ]}`}
+                                            >
+                                            </i>
+                                            <p className={`
+                                            ${["mb-0"]} 
+                                            ${["text-primary"]}`}>
+                                                Your Files
+                                            </p>
                                         </li>
                                         <li
-                                            className={`${["list-group-item"]} ${["d-flex"]} ${[
-                                                "justify-content-between",
-                                            ]} ${["align-items-center"]} {["p-3"]}`}
+                                            className={`
+                                            ${["list-group-item"]} 
+                                            ${["d-flex"]} 
+                                            ${[
+                                                    "justify-content-between",
+                                                ]} 
+                                            ${["align-items-center"]} 
+                                            ${["p-3"]}`}
                                         >
-                                            <p className={["mb-0"]}>No File</p>
+                                            <p className={["mb-0"]}>
+                                                <span style={{ color: "#0E1C36" }}
+                                                >No File
+                                                </span>
+                                            </p>
                                         </li>
                                         <li
-                                            className={`${["list-group-item"]} ${["d-flex"]} ${[
-                                                "justify-content-between",
-                                            ]} ${["align-items-center"]} ${["p-3"]}`}
+                                            className={`
+                                            ${["list-group-item"]} 
+                                            ${["d-flex"]} 
+                                            ${[
+                                                    "justify-content-between",
+                                                ]} 
+                                            ${["align-items-center"]} 
+                                            ${["p-3"]}`}
                                         >
-                                            <p className={["mb-0"]}>No File</p>
+                                            <p className={["mb-0"]}>
+                                                <span style={{ color: "#0E1C36" }}>
+                                                    No File
+                                                </span>
+                                            </p>
                                         </li>
                                         <li
-                                            className={`${["list-group-item"]} ${["d-flex"]} ${[
-                                                "justify-content-between",
-                                            ]} ${["align-items-center"]} ${["p-3"]}`}
+                                            className={`
+                                            ${["list-group-item"]} 
+                                            ${["d-flex"]} 
+                                            ${[
+                                                    "justify-content-between",
+                                                ]} 
+                                            ${["align-items-center"]} 
+                                            ${["p-3"]}`}
                                         >
-                                            <p className={["mb-0"]}>No File</p>
+                                            <p className={["mb-0"]}>
+                                                <span style={{ color: "#0E1C36" }}>
+                                                    No File
+                                                </span>
+                                            </p>
                                         </li>
                                         <li
-                                            className={`${["list-group-item"]} ${["d-flex"]} ${[
-                                                "justify-content-between",
-                                            ]} ${["align-items-center"]} ${["p-3"]}`}
+                                            className={`
+                                            ${["list-group-item"]} 
+                                            ${["d-flex"]} 
+                                            ${[
+                                                    "justify-content-between",
+                                                ]} 
+                                            ${["align-items-center"]} 
+                                            ${["p-3"]}`}
                                         >
-                                            <p className={["mb-0"]}>No File</p>
+                                            <p className={["mb-0"]}>
+                                                <span style={{ color: "#0E1C36" }}>
+                                                    No File
+                                                </span>
+                                            </p>
                                         </li>
                                     </ul>
                                 </div>
@@ -206,9 +264,9 @@ const Profile = () => {
                                     </p>
                                     <p
                                         className={`${["mb-1"]} ${["text-secondary"]}`}
-                                        style={{ fontSize: "1.5rem" }} 
+                                        style={{ fontSize: "1.5rem" }}
                                     >
-                                        Sketch Drawings
+                                        <span style={{ color: "#0E1C36" }}>Sketch Drawings</span>
                                     </p>
                                     <div
                                         className={`${["progress"]} ${["rounded"]}`}
@@ -217,32 +275,96 @@ const Profile = () => {
                                         <div
                                             className={["progress-bar"]}
                                             role="progressbar"
-                                            style={{ width: "80%" }}
+                                            style={{ width: "1%" }}
                                             aria-valuenow="80"
                                             aria-valuemin="0"
                                             aria-valuemax="100"
                                         ></div>
                                     </div>
-                                    {/* <p className={`${["mt-4"]} ${["mb-1"]}`} style={classes.style1}>Website Markup</p>
-                                    <div className={`${["progress"]} ${["rounded"]}`} style={classes.style2}>
-                                        <div className={["progress-bar"]} role="progressbar" style={classes.bar2} aria-valuenow="72"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    <p className={`
+                                    ${["mt-4"]} 
+                                    ${["mb-1"]}`}
+                                        style={{ fontSize: "1.5rem" }}>
+                                        <span style={{ color: "#0E1C36" }}>
+                                            Wireframe Components
+                                        </span>
+                                    </p>
+                                    <div className={`
+                                    ${["progress"]} 
+                                    ${["rounded"]}`}
+                                        style={{ height: "5px" }}>
+                                        <div className={["progress-bar"]}
+                                            role="progressbar"
+                                            style={{ width: "1%" }}
+                                            aria-valuenow="72"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
                                     </div>
-                                    <p className={`${["mt-4"]} ${["mb-1"]}`} style={classes.style1}>One Page</p>
-                                    <div className={`${["progress"]} ${["rounded"]}`} style={classes.style2}>
-                                        <div className={["progress-bar"]} role="progressbar" style={classes.bar3} aria-valuenow="89"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    <p className={`
+                                    ${["mt-4"]} 
+                                    ${["mb-1"]}`}
+                                        style={{ fontSize: "1.5rem" }}>
+                                        <span
+                                            style={{ color: "#0E1C36" }}>
+                                            Mockup Prototype
+                                        </span>
+                                    </p>
+                                    <div className={`
+                                    ${["progress"]} 
+                                    ${["rounded"]}`}
+                                        style={{ height: "5px" }}>
+                                        <div className={["progress-bar"]}
+                                            role="progressbar"
+                                            style={{ width: "1%" }}
+                                            aria-valuenow="89"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
                                     </div>
-                                    <p className={`${["mt-4"]} ${["mb-1"]}`} style={classes.style1}>Mobile Template</p>
-                                    <div className={`${["progress"]} ${["rounded"]}`} style={classes.style2}>
-                                        <div className={["progress-bar"]} role="progressbar" style={classes.bar4} aria-valuenow="55"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    <p className={`
+                                    ${["mt-4"]} 
+                                    ${["mb-1"]}`}
+                                        style={{ fontSize: "1.5rem" }}>
+                                        <span style={{ color: "#0E1C36" }}>
+                                            Project Development
+                                        </span>
+                                    </p>
+                                    <div className={`
+                                    ${["progress"]} 
+                                    ${["rounded"]}`}
+                                        style={{ height: "5px" }}>
+                                        <div className={["progress-bar"]}
+                                            role="progressbar"
+                                            style={{ width: "1%" }}
+                                            aria-valuenow="55"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
                                     </div>
-                                    <p className={`${["mt-4"]} ${["mb-1"]}`} style={classes.style1}>Backend API</p>
-                                    <div className={`${["progress"]} ${["rounded"]} ${["mb-2"]}`} style={classes.style2}>
-                                        <div className={["progress-bar"]} role="progressbar" style={classes.bar5} aria-valuenow="66"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div> */}
+                                    <p className={`
+                                    ${["mt-4"]} 
+                                    ${["mb-1"]}`}
+                                        style={{ fontSize: "1.5rem" }}>
+                                        <span style={{ color: "#0E1C36" }}
+                                        >
+                                            Useability Testing
+                                        </span>
+                                    </p>
+                                    <div className={`
+                                    ${["progress"]} 
+                                    ${["rounded"]} 
+                                    ${["mb-2"]}`}
+                                        style={{ height: "5px" }}
+                                    >
+                                        <div className={["progress-bar"]}
+                                            role="progressbar"
+                                            style={{ width: "1%" }}
+                                            aria-valuenow="66"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
