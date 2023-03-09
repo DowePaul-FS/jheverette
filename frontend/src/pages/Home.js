@@ -8,6 +8,7 @@ import Login from '../components/Users/Login';
 import NavBar from "../components/UI/NavBar";
 import AuthBar from "../components/UI/AuthBar";
 import HeroText from "../components/HeroText";
+import Proposal from "../components/Proposal";
 import RequestBtn from "../components/UI/RequestBtn";
 import CallToAction from "../components/CallToAction";
 import Message from "../components/Message";
@@ -32,6 +33,7 @@ const Home = () => {
   const isAuth = useSelector(state => state.isAuthenticated);
   const [createIsShown, setCreateIsShown] = useState(false);
   const [loginIsShown, setLoginIsShown] = useState(false);
+  const [requestIsShown, setRequestIsShown] = useState(false);
 
   useEffect(() => {
     if (isAuth) {
@@ -45,6 +47,14 @@ const Home = () => {
 
   const showLoginHandler = () => {
     setLoginIsShown(true);
+  };
+
+  const showRequestHandler = () => {
+    setRequestIsShown(true);
+  };
+
+  const hideRequestHandler = () => {
+    setRequestIsShown(false);
   };
 
   const hideCreateHandler = () => {
@@ -69,7 +79,8 @@ const Home = () => {
                 company to provide professional web services and consultations"
         />
         <div className={classes.btn1}>
-          <RequestBtn text="request proposal" id="1" />
+          <RequestBtn text="request proposal" id="1" onShowRequest={showRequestHandler} />
+          {requestIsShown && <Proposal onClose={hideRequestHandler} />}
         </div>
       </section>
       <section className={classes.cta}>

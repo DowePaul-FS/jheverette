@@ -28,6 +28,19 @@ li {
     border: 0;
 }
 
+.player {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    @include mq(small) {
+        width: 500px;
+        height: 424px;
+    }
+}
+
 .bg__img {
     height: 70vh;
     background: url(../assets/images/headers.jpg) fixed center no-repeat;

@@ -1,8 +1,20 @@
-import React from "react";
+import { React, useState } from "react";
 import classes from "./Message.module.css";
+import Proposal from "./Proposal";
 import RequestBtn from "./UI/RequestBtn";
 
 const Message = (props) => {
+  const [requestIsShown, setRequestIsShown] = useState(false);
+
+  const showRequestHandler = () => {
+    setRequestIsShown(true);
+  };
+
+  const hideRequestHandler = () => {
+    setRequestIsShown(false);
+  };
+
+
   return (
     <div className={["container-fluid"]}>
       <div
@@ -32,7 +44,8 @@ const Message = (props) => {
                 ${["align-self-center"]}
                 `}
           >
-            <RequestBtn text="request proposal" id="2" />
+            <RequestBtn text="request proposal" id="2" onShowRequest={showRequestHandler} />
+          {requestIsShown && <Proposal onClose={hideRequestHandler} />}
           </div>
         </span>
       </div>

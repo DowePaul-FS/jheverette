@@ -20,3 +20,7 @@ ReadyBanner
 Footer
 
 nodemon server.js, twig --watch
+
+ <video autoPlay loop muted className={classes.player}>
+                <source src={Loop} type="video/mp4" />
+            </video>
