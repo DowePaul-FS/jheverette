@@ -8,6 +8,7 @@ const NavBar = (props) => {
         <nav className={`
         ${["navbar"]} 
         ${["navbar-expand-md"]}
+        ${[classes.nav]}
         `}
         >
             <div className={`
@@ -21,7 +22,12 @@ const NavBar = (props) => {
                 ${["m-0"]}
                 `} href="home">
                     <Link to="/Home">
-                        J.H.Everette & Associates
+                        <img
+                            width="228"
+                            height="70"
+                            src={props.logo1}
+                            alt="Logo"
+                        />
                     </Link>
                 </a>
                 <div className={`

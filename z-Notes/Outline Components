@@ -1,4 +1,4 @@
-UUID() VARCHAR(128) PK NN 
+UUID() VARCHAR(128) PK NN
 
 CreatedAt default(CURRENT_TIMESTAMP)
 
@@ -7,7 +7,7 @@ curl -d 'firstname=Paul&lastname=Dowe&email=pdowejr@twc.com&password=TI22word!' 
 pm2 monit
 
 Header
-    NavBar
+NavBar
 Hero
 RequestBtn
 CallToAction
@@ -21,6 +21,146 @@ Footer
 
 nodemon server.js, twig --watch
 
- <video autoPlay loop muted className={classes.player}>
-                <source src={Loop} type="video/mp4" />
-            </video>
+<video autoPlay loop muted className={classes.player}>
+    <source src={Loop} type="video/mp4" />
+</video>
+
+className={classes["bg__img"]}
+className={classes["bg__img"]}
+
+background: url(../assets/images/headers.jpg) fixed center no-repeat;
+
+background: url(../assets/images/matte1.png) fixed center no-repeat;
+
+<img width="114" height="35" src={props.logo1} alt="Logo" />
+
+@media (min-width: 768px) {
+.modal {
+width: 40rem;
+left: calc(50% - 20rem);
+}
+}
+
+@include mq(small) {
+    width: 500px;
+    height: 424px;
+}
+
+@media (min-width: 480px) {
+    .player {
+    width: 500px;
+    height: 424px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767.98px) {
+    .bg__img {
+    width: 635px;
+    
+    }
+}
+
+.add_item {
+    position: fixed;
+    top: 4.5rem;
+    color: $tertiary-color;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    background-color: $btnblu-color;
+    background-blend-mode: darken;
+    background-size: cover;
+    opacity: 96%;
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .delete_item {
+    position: fixed;
+    top: 4.5rem;
+    color: $tertiary-color;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    background-color: $btnblu-color;
+    background-blend-mode: darken;
+    background-size: cover;
+    opacity: 96%;
+    h2 {
+      font-size: 1.6rem;
+      width: 10rem;
+    }
+  
+    label {
+      display: block;
+    }
+  
+    .frm__message {
+      color: $rich-color;
+    }
+  }
+  
+  .frm__container {
+    @media #{$small} {
+      justify-content: center;
+      width: 400px;
+      max-width: 400px;
+      margin: 1rem;
+      padding: 2rem;
+    }
+  
+    @media #{$medium} {
+      display: flex-column;
+      position: absolute;
+      top: 0%;
+      left: 36%;
+      width: 400px;
+      max-width: 400px;
+      margin: 1rem;
+      padding: 2rem;
+    }
+  }
+  
+  .divTitle,
+  .divId,
+  .divDate,
+  .divDesc,
+  .divBtn,
+  .divMsg {
+    position: relative;
+    padding-left: 5rem;
+  }
+  
+  .frm__add {
+    position: relative;
+    margin-left: 5rem;
+    width: 6.5rem;
+    padding: 0 0.3rem;
+    background-color: lighten($frmbtndrk-color, 10%);
+    color: darken($frmbtnlgt-color, 10%);
+  }
+  #title {
+    width: 31rem;
+  }
+  
+  #id {
+    width: 31rem;
+  }
+  
+  #date {
+    width: 31.02rem;
+  }
+  
+  #subbtn,
+  #close,
+  #delete,
+  #close__del {
+    cursor: pointer;
+  }
+  
