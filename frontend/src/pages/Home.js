@@ -4,7 +4,7 @@ import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Navigate } from 'react-router-dom';
 import Create from '../components/Users/Create';
-import Loop from "../assets/images/jhe_bg_ 01.mp4";
+import Loop from "../assets/images/jhe_bg_2.mp4";
 import Logo from "../assets/images/jhe_logo_228_70.png";
 import Login from '../components/Users/Login';
 import NavBar from "../components/UI/NavBar";
@@ -73,17 +73,19 @@ const Home = () => {
         <source src={Loop} type="video/mp4" />
       </video>
       <main>
-        <section className={classes["bg__img"]}>
+        <section className={["container-fluid"]}>
           {!isAuth && <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} logo1={Logo} />}
           {isAuth && <AuthBar /> && <Navigate to="/Profile" replace={true} />}
           {createIsShown && <Create onClose={hideCreateHandler} />}
           {loginIsShown && <Login onClose={hideLoginHandler} />}
-          <HeroText
-            title="Quality Web Design & Development for all your Business needs."
-            text="We provide full-service website design, development, and search
+          <div>
+            <HeroText
+              title="Quality Web Design & Development for all your Business needs."
+              text="We provide full-service website design, development, and search
                 optimization services for your business. We partner with your
                 company to provide professional web services and consultations"
-          />
+            />
+          </div>
           <div className={classes.btn1}>
             <RequestBtn text="request proposal" id="1" onShowRequest={showRequestHandler} />
             {requestIsShown && <Proposal onClose={hideRequestHandler} />}

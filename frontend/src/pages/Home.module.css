@@ -31,16 +31,41 @@ li {
 .player {
     position: absolute;
     width: 100%;
-    height: 70%;
-    object-fit: cover;
+    height: 55.5%;
+    object-fit: fill;
     z-index: -1;
 }
 
-@media (min-width: 480px) and (max-width: 767.98px) {
+/* @media only screen and (min-width: 1200px) {
     .player {
-    width: 763px;
-    height: 617px;
+        width: 1920px;
+        height: 736px;
     }
+} */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* .player {
+        height: 536px;
+    } */
+}
+
+@media (max-width: 575.98px) {
+    .player {
+        height: 522px;
+    }
+}
+
+@media only screen and (min-width: 767.98px) {
+    /* .player {
+        height: 397px;
+    }  */
+}
+
+@media only screen and (min-width: 576px) {
+    /* .player {
+        width: 589px;
+        height: 433px;
+    } */
 }
 
 .bg__img {
@@ -51,7 +76,7 @@ li {
 
 @media (min-width: 480px) and (max-width: 767.98px) {
     .bg__img {
-    width: 763px;
+        width: 763px;
     }
 }
 
