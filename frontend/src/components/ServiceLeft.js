@@ -23,9 +23,7 @@ const ServiceLeft = (props) => {
                     </p>
                 </div>
                 <div className={classes["svc__link"]}>
-                    <a href="design" title="web design in wilmington north carolina"
-                    >{props.page}</a
-                    >
+                    {props.page}
                 </div>
             </section>
             <section className={`
@@ -36,28 +34,28 @@ const ServiceLeft = (props) => {
                 <h2 hidden>des</h2>
 
                 <figure className={classes.fig1}>
-                            <img
-                                width="308"
-                                height="300"
-                                src={props.image1}
-                                alt="Design Layout"
-                            />
+                    <img
+                        width="308"
+                        height="300"
+                        src={props.image1}
+                        alt="Design Layout"
+                    />
                 </figure>
                 <figure className={classes.fig2}>
-                            <img
-                                width="308"
-                                height="560"
-                                src={props.image2}
-                                alt="Web Design"
-                            />
+                    <img
+                        width="308"
+                        height="560"
+                        src={props.image2}
+                        alt="Web Design"
+                    />
                 </figure>
                 <figure className={classes.fig3}>
-                            <img
-                                width="308"
-                                height="300"
-                                src={props.image3}
-                                alt="HTML Code"
-                            />
+                    <img
+                        width="308"
+                        height="300"
+                        src={props.image3}
+                        alt="HTML Code"
+                    />
                 </figure>
             </section>
         </div>

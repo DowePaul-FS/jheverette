@@ -15,28 +15,28 @@ const ServiceRight = (props) => {
             >
                 <h2 hidden>dev</h2>
                 <figure className={classes.fig1}>
-                            <img
-                                width="308"
-                                height="300"
-                                src={props.image1}
-                                alt="Development Code"
-                            />
+                    <img
+                        width="308"
+                        height="300"
+                        src={props.image1}
+                        alt="Development Code"
+                    />
                 </figure>
                 <figure className={classes.fig2}>
-                            <img
-                                width="308"
-                                height="560"
-                                src={props.image2}
-                                alt="Mobile Development"
-                            />
+                    <img
+                        width="308"
+                        height="560"
+                        src={props.image2}
+                        alt="Mobile Development"
+                    />
                 </figure>
                 <figure className={classes.fig3}>
-                            <img
-                                width="308"
-                                height="300"
-                                src={props.image3}
-                                alt="Development Programming"
-                            />
+                    <img
+                        width="308"
+                        height="300"
+                        src={props.image3}
+                        alt="Development Programming"
+                    />
                 </figure>
             </section>
             <section className="col">
@@ -58,10 +58,7 @@ const ServiceRight = (props) => {
                     </p>
                 </div>
                 <div className={classes["svc__link"]}>
-                    <a href="development"
-                        title="web development in wilmington north carolina">
-                        {props.page}</a
-                    >
+                    {props.page}
                 </div>
             </section>
         </div>

@@ -16,66 +16,72 @@ const AuthBar = (props) => {
             ${["m-0"]}
             `}
             >
-                <a className={`
-                ${classes["nav-name"]} 
-                ${["navbar-brand"]} 
-                ${["m-0"]}
-                `} href="home">
-                    <Link to="/Home">
-                        J.H.Everette & Associates
-                    </Link>
-                </a>
+                <Link
+                    className={`
+                    ${classes["nav-name"]} 
+                    ${["navbar-brand"]} 
+                    ${["m-0"]}
+                    `}
+                    to="/">
+                    <img
+                        width="228"
+                        height="70"
+                        src={props.logo1}
+                        alt="Logo"
+                    />
+                </Link
+                >
                 <div className={`
                 ${["navbar-nav"]} 
                 ${["d-none"]} 
                 ${["d-md-flex"]}
                 `}
                 >
-                    <a className={`
-                    ${classes["nav-a"]} 
-                    ${["nav-item"]} 
-                    ${["nav-link"]}
-                    `} href="design">
-                        <Link to="/WebDesign">
-                            WEB DESIGN
-                        </Link>
-                    </a>
-                    <a className={`
-                    ${classes["nav-a"]} 
-                    ${["nav-item"]} 
-                    ${["nav-link"]}
-                    `} href="development">
-                        <Link to="/WebDevelopment">
-                            WEB DEVELOPMENT
-                        </Link>
-                    </a>
-                    <a className={`
-                    ${classes["nav-a"]} 
-                    ${["nav-item"]} 
-                    ${["nav-link"]}
-                    `} href="seo">
-                        <Link to="/Seo">
-                            SEO
-                        </Link>
-                    </a>
-                    <a className={`
-                    ${classes["nav-a"]} 
-                    ${["nav-item"]} 
-                    ${["nav-link"]}
-                    `} href="branding">
-                        <Link to="/Branding">
-                            BRANDING
-                        </Link>
-                    </a>
-                    <a className={`
-                    ${classes["nav-a"]} 
-                    ${["nav-item"]} 
-                    ${["nav-link"]}
-                    `} href="about">
-                        <Link to="/AboutUs">
-                            ABOUT US
-                        </Link>
-                    </a>
+                    <Link
+                        className={`
+                        ${classes["nav-a"]} 
+                        ${["nav-item"]} 
+                        ${["nav-link"]}
+                        `}
+                        to="/WebDesign">
+                        WEB DESIGN
+                    </Link>
+                    <Link
+                        className={`
+                        ${classes["nav-a"]} 
+                        ${["nav-item"]} 
+                        ${["nav-link"]}
+                        `}
+                        to="/WebDevelopment">
+                        WEB DEVELOPMENT
+                    </Link>
+                    <Link
+                        className={`
+                        ${classes["nav-a"]} 
+                        ${["nav-item"]} 
+                        ${["nav-link"]}
+                        `}
+                        to="/Seo">
+                        SEO
+                    </Link>
+                    <Link
+                        className={`
+                        ${classes["nav-a"]} 
+                        ${["nav-item"]} 
+                        ${["nav-link"]}
+                        `}
+                        to="/Branding">
+                        BRANDING
+                    </Link>
+                    <Link
+                        className={`
+                        ${classes["nav-a"]} 
+                        ${["nav-item"]} 
+                        ${["nav-link"]}
+                        `}
+                        to="/AboutUs">
+                        ABOUT US
+                    </Link>
                     <button className={`
                     ${classes["nav-a"]} 
                     ${["nav-item"]}

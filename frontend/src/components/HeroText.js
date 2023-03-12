@@ -13,15 +13,16 @@ const HeroText = (props) => {
             ${["row-cols-1"]}
             `}
             >
-                <h2 className={`
+                <h2 className={` 
                 ${["col"]} 
+                ${["col"]}
                 ${classes["hero__title"]}
                 `}
                 >
                     {props.title}
                 </h2>
                 <p className={`
-                ${["col"]} 
+                ${["col"]}
                 ${classes["hero__para"]}
                 `}
                 >

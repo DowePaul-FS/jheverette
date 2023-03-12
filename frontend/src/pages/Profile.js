@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../store";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import Logo from "../assets/images/jhe_logo_228_70.png";
 import AuthBar from "../components/UI/AuthBar";
 import classes from "./Profile.module.css";
 import logo from "../assets/images/Profile_logo_625.png";
@@ -19,7 +20,7 @@ const Profile = () => {
         <main>
             <div className={classes.background}>
                 {isAuth ? (
-                    <AuthBar signOut={logOutHandler} />
+                    <AuthBar signOut={logOutHandler} logo1={Logo} />
                 ) : (
                     <Navigate to="/" replace={true} />
                 )}

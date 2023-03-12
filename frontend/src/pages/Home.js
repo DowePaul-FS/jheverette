@@ -75,7 +75,7 @@ const Home = () => {
       <main>
         <section className={["container-fluid"]}>
           {!isAuth && <NavBar onShowCreate={showCreateHandler} onShowLogin={showLoginHandler} logo1={Logo} />}
-          {isAuth && <AuthBar /> && <Navigate to="/Profile" replace={true} />}
+          {isAuth && <AuthBar logo1={Logo} /> && <Navigate to="/Profile" replace={true} />}
           {createIsShown && <Create onClose={hideCreateHandler} />}
           {loginIsShown && <Login onClose={hideLoginHandler} />}
           <div>

@@ -36,36 +36,43 @@ li {
     z-index: -1;
 }
 
-/* @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
     .player {
-        width: 1920px;
-        height: 736px;
-    }
-} */
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* .player {
-        height: 536px;
-    } */
-}
-
-@media (max-width: 575.98px) {
-    .player {
-        height: 522px;
+        height: 535px;
     }
 }
 
-@media only screen and (min-width: 767.98px) {
-    /* .player {
-        height: 397px;
-    }  */
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px){
+    .player {
+        height: 506px;
+    } 
 }
 
-@media only screen and (min-width: 576px) {
-    /* .player {
-        width: 589px;
-        height: 433px;
-    } */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){
+    .player {
+        width: 1080px;
+        height: 372px;
+    } 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px){
+    .player {
+        height: 336px;
+    } 
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px){
+    .player {
+        width: 577px;
+        height: 336px;
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 575.98px) {
+    .player {
+        width: 429px;
+        height: 288px;
+    }
 }
 
 .bg__img {
@@ -74,14 +81,14 @@ li {
     background-size: cover;
 }
 
-@media (min-width: 480px) and (max-width: 767.98px) {
-    .bg__img {
-        width: 763px;
-    }
-}
-
-.btn1 {
+/* .btn1 {
     margin-left: 40px;
+} */
+
+@media only screen and (min-width: 390px) and (max-width: 575.98px) {
+    .btn1 {
+        margin-left: 15px;
+    }
 }
 
 .cta {
@@ -131,3 +138,4 @@ li {
     margin-top: 8rem;
     background-color: #010d28;
 }
+
