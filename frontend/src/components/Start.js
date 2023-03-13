@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import classes from "./Start.module.css";
 import Proposal from "./Proposal";
 import RequestBtn from "./UI/RequestBtn";
