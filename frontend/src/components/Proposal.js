@@ -94,7 +94,7 @@ const Proposal = (props) => {
                 </div>
             </form>
         </Modal >
-    )
+    );
 }
 
 export default Proposal;

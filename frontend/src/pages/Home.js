@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from 'react-redux';
 import classes from "./Home.module.css";
 import { Link } from "react-router-dom";
@@ -69,7 +69,7 @@ const Home = () => {
 
   return (
     <div>
-      <video autoPlay loop muted className={classes.player}>
+      <video autoPlay loop className={classes.player}>
         <source src={Loop} type="video/mp4" />
       </video>
       <main>
